@@ -1,0 +1,389 @@
+
+Github
+jcespinoza13
+Carlos*esp
+
+Recovery Codes
+065b3-534cd 
+3e435-01380 
+b1d81-85f30 
+fb00a-6e9bd 
+869ab-e13a1 
+00210-6b3ce 
+ae16b-e6c2b 
+60966-265dd 
+a9743-5d335 
+d79e9-83e5b 
+b5a49-8c3f6 
+88116-259fd 
+f6462-4fe51 
+20d7d-c77b4 
+437af-4fd1a 
+fa89f-205d1
+
+Comandos de Git
+Click derecho Git Bash Here para setear carpeta
+
+git version (2.21.0.windows.1)
+git config --global user.name "Juan Espinoza"
+git config --global user.mail "jcespinoza13@gmail.com"
+
+
+
+git init (iniciar repositorio)
+git clone Id_repositorio_a_clonar carpeta_de_destino (clonar repositorio)
+git add nombre_del_archivo (añadir archivos al área de preparación Staggin Area)
+git commt -m "mensaje del commt" (ejecutar un commit)
+git status (verificar el estado del repositorio)
+git log (ver el historial de commits)
+git diff commit_id1 commit _id2 (ver las diferencias de los archivos de los 2 commits)
+cheatset git checkout commit_id (volver a la versión indicada)
+git tag -a nombre_de_la_etiqueta -m (mensaje explicativo) 
+git branch nombre_de_la_rama (crear una rama)
+git merge rama (unir la rama actual con la rama especificada)
+git branch (listar todas las ramas)
+
+
+
+
+Ejemplos:
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~
+$ git --version
+git version 2.21.0.windows.1
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~
+$ git config --global user.name "Juan Espinoza"
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~
+$ git config --global user.mail "jcespinoza13@gmail.com"
+
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU (master)
+$ git init
+Initialized empty Git repository in C:/Users/jcepinoza/Documents/NextU/.git/
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU (master)
+$ git clone https://github.com/MariaClaraNextU/Cenicienta.git
+Cloning into 'Cenicienta'...
+remote: Enumerating objects: 25, done.
+remote: Total 25 (delta 0), reused 0 (delta 0), pack-reused 25
+Unpacking objects: 100% (25/25), done.
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU (master)
+$
+
+Repositorio nuevo y agragar cambios.
+
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git init
+Initialized empty Git repository in C:/Users/jcepinoza/Documents/NextU/Caperucita/.git/
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ echo "cuento" > cuento.txt
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ echo "tareas" > tareas.txt
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git add cuento.txt
+warning: LF will be replaced by CRLF in cuento.txt.
+The file will have its original line endings in your working directory
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git add cuento.txt
+warning: LF will be replaced by CRLF in cuento.txt.
+The file will have its original line endings in your working directory
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git commit -m "Introducción del cuento"
+[master (root-commit) d202ddb] Introducción del cuento
+ 1 file changed, 2 insertions(+)
+ create mode 100644 cuento.txt
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git add cuento.txt
+warning: LF will be replaced by CRLF in cuento.txt.
+The file will have its original line endings in your working directory
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git commit -m "Su madre pide un favor"
+[master d71858c] Su madre pide un favor
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$
+
+Control de versiones:
+
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git log
+commit d71858c0bd5e0e06373736e6afff5b4dd6cbbe7d (HEAD -> master)
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:30:06 2019 -0500
+
+    Su madre pide un favor
+
+commit d202ddb0269258fba81a92e84a2edd4e55dcdf8d
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:27:34 2019 -0500
+
+    Introducción del cuento
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git add caperucita.jpg
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git commit -m "Añade Imagen"
+[master b67001b] Añade Imagen
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 caperucita.jpg
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ add cuento.txt
+bash: add: command not found
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git commit -m "Descripción casa de la abuela"
+On branch master
+Untracked files:
+        tareas.txt
+
+nothing added to commit but untracked files present
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git add cuento.txt
+warning: LF will be replaced by CRLF in cuento.txt.
+The file will have its original line endings in your working directory
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git commit -m "Descripción de la casa de la abuela"
+[master a30052a] Descripción de la casa de la abuela
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git log
+commit a30052ad7b8db95ea438ee73374673f415f9785d (HEAD -> master)
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:41:57 2019 -0500
+
+    Descripción de la casa de la abuela
+
+commit b67001bc5488698c5ae0bcd1982d9cc5545d5267
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:39:21 2019 -0500
+
+    Añade Imagen
+
+commit d71858c0bd5e0e06373736e6afff5b4dd6cbbe7d
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:30:06 2019 -0500
+
+    Su madre pide un favor
+
+commit d202ddb0269258fba81a92e84a2edd4e55dcdf8d
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:27:34 2019 -0500
+
+    Introducción del cuento
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$
+
+
+Cambios entre versiones:
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git log
+commit d71858c0bd5e0e06373736e6afff5b4dd6cbbe7d (HEAD -> master)
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:30:06 2019 -0500
+
+    Su madre pide un favor
+
+commit d202ddb0269258fba81a92e84a2edd4e55dcdf8d
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:27:34 2019 -0500
+
+    Introducción del cuento
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git add caperucita.jpg
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git commit -m "Añade Imagen"
+[master b67001b] Añade Imagen
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 caperucita.jpg
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ add cuento.txt
+bash: add: command not found
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git commit -m "Descripción casa de la abuela"
+On branch master
+Untracked files:
+        tareas.txt
+
+nothing added to commit but untracked files present
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git add cuento.txt
+warning: LF will be replaced by CRLF in cuento.txt.
+The file will have its original line endings in your working directory
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git commit -m "Descripción de la casa de la abuela"
+[master a30052a] Descripción de la casa de la abuela
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git log
+commit a30052ad7b8db95ea438ee73374673f415f9785d (HEAD -> master)
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:41:57 2019 -0500
+
+    Descripción de la casa de la abuela
+
+commit b67001bc5488698c5ae0bcd1982d9cc5545d5267
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:39:21 2019 -0500
+
+    Añade Imagen
+
+commit d71858c0bd5e0e06373736e6afff5b4dd6cbbe7d
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:30:06 2019 -0500
+
+    Su madre pide un favor
+
+commit d202ddb0269258fba81a92e84a2edd4e55dcdf8d
+Author: Juan Espinoza <jcespinoza13@gmail.com>
+Date:   Sat May 18 22:27:34 2019 -0500
+
+    Introducción del cuento
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ ^C
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ ^C
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git diff ^C
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git diff d202ddb0269258fba81a92e84a2edd4e55dcdf8d d71858c0bd5e0e06373736e6afff5b4dd6cbbe7d
+diff --git a/cuento.txt b/cuento.txt
+index 98f1905..4697e2c 100644
+--- a/cuento.txt
++++ b/cuento.txt
+@@ -1,2 +1,3 @@
+-cuento
++Habia una vez una ni<F1>a que usaba una Caperuza roja que vivia con su madre en el bosque.
++Su madre le pide un favor, quiere que lleve a su abuelita una cesta de pan y mermeladas para su abuelita.
+
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git diff a30052ad7b8db95ea438ee73374673f415f9785d  b67001bc5488698c5ae0bcd1982d9cc5545d5267
+diff --git a/cuento.txt b/cuento.txt
+index 4462b2d..4697e2c 100644
+--- a/cuento.txt
++++ b/cuento.txt
+@@ -1,3 +1,3 @@
+ Habia una vez una ni<F1>a que usaba una Caperuza roja que vivia con su madre en el bosque.
+-Su madre le pide un favor, quiere que lleve a su abuelita una cesta de pan y mermeladas para su abuelita que esta muy enferma.
++Su madre le pide un favor, quiere que lleve a su abuelita una cesta de pan y mermeladas para su abuelita.
+
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git checkout
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git checkout  b67001
+Note: checking out 'b67001'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b67001b Añade Imagen
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita ((b67001b...))
+$ git checkout  b67001
+HEAD is now at b67001b Añade Imagen
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita ((b67001b...))
+$ git checkout a30052
+Previous HEAD position was b67001b Añade Imagen
+HEAD is now at a30052a Descripción de la casa de la abuela
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita ((a30052a...))
+$ git tag -a imagen -m "Añade Imagen"
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita ((imagen))
+$ git checkout imagen
+HEAD is now at a30052a Descripción de la casa de la abuela
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita ((imagen))
+$
+
+La ramas:
+
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita ((imagen))
+$ git branch imagenes_alternativas
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita ((imagen))
+$ git checkout imagenes_alternativas
+Switched to branch 'imagenes_alternativas'
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (imagenes_alternativas)
+$ git add .
+warning: LF will be replaced by CRLF in tareas.txt.
+The file will have its original line endings in your working directory
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (imagenes_alternativas)
+$ git commit -m "Nuevas imágenes"
+[imagenes_alternativas 3375ab7] Nuevas imágenes
+ 2 files changed, 1 insertion(+)
+ create mode 100644 caperucitaylobo.jpg
+ create mode 100644 tareas.txt
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (imagenes_alternativas)
+$ git checkout master
+Switched to branch 'master'
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git merge imagenes_alternativas
+Updating a30052a..3375ab7
+Fast-forward
+ caperucitaylobo.jpg | Bin 0 -> 24180 bytes
+ tareas.txt          |   1 +
+ 2 files changed, 1 insertion(+)
+ create mode 100644 caperucitaylobo.jpg
+ create mode 100644 tareas.txt
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$ git checkout imagenes_alternativas
+Switched to branch 'imagenes_alternativas'
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (imagenes_alternativas)
+$ git branch
+* imagenes_alternativas
+  master
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (imagenes_alternativas)
+$ git checkout master
+Switched to branch 'master'
+
+jcepinoza@LAPTOP-RC0KLBHO MINGW64 ~/Documents/NextU/Caperucita (master)
+$
