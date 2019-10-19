@@ -1,0 +1,88 @@
+body{
+  background-color: gray;
+}
+footer{
+  margin-top: 20px;
+}
+img{
+  border-radius: 10px;
+}
+
+#contenedor{
+  font-family: helvetica;
+  font-size: 16px;
+}
+#encabezado{
+  display: block;
+  margin: 0 auto;
+}
+.itemIndice{
+  list-style: upper-roman;
+}
+.enlace{
+  color: red;
+}
+/* Busca enlaces que inician con # y los hace rojos */
+a[href^='#']{
+  color: red;
+}
+/* busca la terminación .svg y le da borde redondo */
+img[src$='.svg']{
+  border-radius: 50px;
+}
+/* Busca imagenes png y jpg y les da un contorno redondeado */
+img[src$='jpg'], img[src$='png']{
+  border: 1px solid black;
+  border-radius: 5px;
+}
+/* El * aplica estilo a todo el documento */
+*{
+  margin: 1vh 1vw;
+}
+/* Aplica formato a un elemento h2 precedido por uno h1 */
+h1 + h2{
+  text-decoration: underline;
+}
+/* Aplica a todos lo párrafos que siguen a un h2 */
+h2 ~ p{
+text-align: justify;
+}
+/* aplica a un h2 a continuación de un article */
+article> h2{
+  text-decoration: underline;
+}
+/* Li a continuación de UL */
+ul li{
+  list-style-type: circle;
+}
+a[href^='http://']:visited{
+  color: red;
+}
+a:hover{
+  color: green;
+}
+h2:first-child{
+  text-decoration: underline;
+}
+input:focus{
+  width:160px;
+  height: 140px;
+}
+p::first-letter{
+  text-transform: capitalize;
+}
+p::first-line{
+  font-size: 32px;
+}
+p::selection{
+
+}
+#estudios>ul>li:first-child>a::after{
+  content: '"afeter -"'
+}
+#estudios>ul>li:last-child>a::before{
+  content: '"before -"'
+}
+#estudios>ul>li:nth-child(2)>a::after{
+  content: '"hijo #2"'
+}
